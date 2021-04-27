@@ -35,15 +35,15 @@ wrap.sprite.add("mario-items", x2, y, "moving_platform1")
 
 #первый прыжок
 half_way = (x1-24)/2
-wrap.action.move_to_pos(0, 24+half_way, mario_start_y-half_way)
-wrap.action.move_to_pos(0, x1, mario_start_y)
+wrap.actions.move_to(0, 24+half_way, mario_start_y-half_way)
+wrap.actions.move_to(0, x1, mario_start_y)
 
 #второй прыжок
 half_way = (x2-x1)/2
-wrap.action.move_to_pos(0, x1+half_way, mario_start_y-half_way)
-wrap.action.move_to_pos(0, x2, mario_start_y)
+wrap.actions.move_to(0, x1+half_way, mario_start_y-half_way)
+wrap.actions.move_to(0, x2, mario_start_y)
 
 #третий прыжок
 half_way = (last_x-x2)/2
-wrap.action.move_to_pos(0, x2+half_way, mario_start_y-half_way)
-wrap.action.move_to_pos(0, last_x, mario_start_y)
+wrap.actions.move_to(0, x2+half_way, mario_start_y-half_way)
+wrap.actions.move_to(0, last_x, mario_start_y)

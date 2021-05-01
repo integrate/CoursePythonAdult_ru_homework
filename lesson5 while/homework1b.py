@@ -17,6 +17,7 @@
 
 import random
 
+#выбираем числа для первого задания
 a = random.randint(2, 9)
 b = random.randint(2, 9)
 count_tasks = 1
@@ -24,17 +25,21 @@ count_tasks = 1
 count_try = 0
 
 while count_tasks <= 10:
+    # задаем вопрос пользователю
     count_try += 1
     print("Вопрос номер "+str(count_tasks)+". Попытка номер "+str(count_try))
     answer = input("Сколько будет " + str(a) + "*" + str(b) + "?")
 
+    #если пользователь ввел слово "стоп" - прерываем работы цикла
     if answer=="стоп":
         break
     answer = int(answer)
 
+    # если ответили неправильно - сообщаем об этом пользователю
     if answer != a*b:
         print("Неверно. Попробуй еще раз.")
     else:
+        # если ответили правильно - выбираем числа для следующего задания
         print("Правильно!")
 
         a = random.randint(2, 9)
